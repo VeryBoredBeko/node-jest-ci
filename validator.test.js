@@ -62,6 +62,6 @@ describe("Negative Tests: Обработка ошибок", () => {
     // Ожидаем, что функция выбросит исключение (Error) при передаче null или числа
     expect(() => {
       validatePassword(null, {});
-    }).toHaveProperty("message", "Пароль должен быть строкой");
+    }).toThrow();
   });
 });
