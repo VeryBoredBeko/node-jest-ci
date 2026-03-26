@@ -2,7 +2,7 @@ function validatePassword(password, config) {
   const errors = [];
 
   if (password.length < config.minLength) {
-    errors.push(`Минимальная длина: ${config.minLength}`);
+    errors.push(`Минимальная длина: ${config.minLength}. Текущая длина: ${password.length}`);
   }
 
   if (config.requireNumbers && !/\d/.test(password)) {
